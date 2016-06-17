@@ -1,0 +1,28 @@
+{
+  "name": "mongodb-team-deps",
+  "version": "1.0.0",
+  "description": "Module that gives extended commands to work with npm dependencies in a node project",
+  "main": "cli.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mongodb-js/team-deps"
+  },
+  "author": "Christopher Shum",
+  "license": "ISC",
+  "dependencies": {
+    "JSONStream": "^1.1.2",
+    "chalk": "^1.1.3",
+    "through2": "^2.0.1",
+    "yargs": "^4.7.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
