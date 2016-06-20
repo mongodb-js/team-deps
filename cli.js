@@ -3,12 +3,12 @@ var npm_functions = require('./lib/index.js')
 
 var options = yargs
   .usage('Usage: $0 <command> [options]')
-  .command('list [dir]', 'List all npm module dependencies of a node project',
+  .command('list [dir] [options]', 'List all npm module dependencies of a node project',
     function (yargs) {
       return yargs.option('organization', {
         alias: 'o',
         describe: 'apply a filter to list only npm dependencies from a specified Github organization',
-        default: false
+        default: null
       })
     },
     function (argv) {
@@ -18,18 +18,18 @@ var options = yargs
       })
     }
   )
-  .command('clone [dir]', 'Clone all npm module dependencies of a node project',
+  .command('clone [dir] [options]', 'Clone all npm module dependencies of a node project',
     function (yargs) {
       return yargs.options({
         'destination' : {
           alias: 'd',
           describe: 'a destination directory to clone all git repositories to',
-          default: false
+          default: null
         },
         'organization' : {
           alias: 'o',
           describe: 'apply a filter to clone only npm dependencies from a specified Github organization',
-          default: false
+          default: null
         }
       })
     },
@@ -41,7 +41,7 @@ var options = yargs
       })
     }
   )
-  .command('check [dir]', 'Check that all npm module dependencies are up to date',
+  .command('check [dir] [options]', 'Check that all npm module dependencies are up to date',
     function (yargs) {
       return; //no options supported yet
     },
@@ -51,7 +51,7 @@ var options = yargs
       })
     }
   )
-  .command('update [dir]', 'Update all npm module dependencies against a package.json',
+  .command('update [dir] [options]', 'Update all npm module dependencies against a package.json',
     function (yargs) {
       return; //no options supported yet
     },
@@ -61,18 +61,18 @@ var options = yargs
       })
     }
   )
-  .command('pull [dir]', 'Run git pull in all dependencies of a node project',
+  .command('pull [dir] [options]', 'Run git pull for all dependencies of a node project',
     function (yargs) {
       return yargs.options({
         'destination' : {
           alias: 'd',
           describe: 'a destination directory to find all related git repositories ',
-          default: false
+          default: null
         },
         'organization' : {
           alias: 'o',
           describe: 'apply a filter to pull only npm dependencies from a specified Github organization',
-          default: false
+          default: null
         }
       })
     },
