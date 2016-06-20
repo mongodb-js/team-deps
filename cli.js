@@ -28,7 +28,7 @@ var options = yargs
         },
         'organization' : {
           alias: 'o',
-          describe: 'apply a filter to list only npm dependencies from a specified Github organization',
+          describe: 'apply a filter to clone only npm dependencies from a specified Github organization',
           default: false
         }
       })
@@ -58,6 +58,29 @@ var options = yargs
     function (argv) {
       npm_functions.update({
         dir: argv.dir,
+      })
+    }
+  )
+  .command('pull [dir]', 'Run git pull in all dependencies of a node project',
+    function (yargs) {
+      return yargs.options({
+        'destination' : {
+          alias: 'd',
+          describe: 'a destination directory to find all related git repositories ',
+          default: false
+        },
+        'organization' : {
+          alias: 'o',
+          describe: 'apply a filter to pull only npm dependencies from a specified Github organization',
+          default: false
+        }
+      })
+    },
+    function (argv) {
+      npm_functions.pull({
+        dir: argv.dir,
+        d: argv.d,
+        o: argv.o
       })
     }
   )
