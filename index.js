@@ -1,4 +1,6 @@
 /* eslint camelcase:0 */
+/* eslint no-shadow:0 */
+/* eslint no-unused-vars:0 */
 
 // var yargs = require('yargs');
 var npm_functions = require('./lib/index.js');
@@ -6,7 +8,7 @@ var npm_functions = require('./lib/index.js');
 var yargs = require('yargs')
   .usage('Usage: $0 <command> [options]')
   .command('list [dir] [options]', 'List all npm module dependencies of a node project',
-    function() {
+    function(yargs) {
       return yargs.option('organization', {
         alias: 'o',
         describe: 'apply a filter to list only npm dependencies from a specified Github organization',
@@ -21,7 +23,7 @@ var yargs = require('yargs')
     }
   )
   .command('clone [dir] [options]', 'Clone all npm module dependencies of a node project',
-    function() {
+    function(yargs) {
       return yargs.options({
         'destination': {
           alias: 'd',
@@ -44,7 +46,7 @@ var yargs = require('yargs')
     }
   )
   .command('check [dir] [options]', 'Check that all npm module dependencies are up to date',
-    function() {
+    function(yargs) {
       return; // no options supported yet
     },
     function(argv) {
@@ -54,7 +56,7 @@ var yargs = require('yargs')
     }
   )
   .command('update [dir] [options]', 'Update all npm module dependencies against a package.json',
-    function() {
+    function(yargs) {
       return; // no options supported yet
     },
     function(argv) {
@@ -64,7 +66,7 @@ var yargs = require('yargs')
     }
   )
   .command('pull [source] [options]', 'Run git pull for all dependencies of a node project',
-    function() {
+    function(yargs) {
       return yargs.options({
         'source': {
           alias: 's',
