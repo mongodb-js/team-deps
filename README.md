@@ -50,7 +50,7 @@ team-deps clone -d <destination>
 will clone the git repos of the current project's npm dependencies to the specified destination directory
 
 ```javascript
-team-deps pull -s <destination>
+team-deps pull -s <source>
 ```
 will git pull all the repos (only if they are on master branch) of the current project's npm dependencies at the specified source directory
 
