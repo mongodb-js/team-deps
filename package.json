@@ -1,6 +1,6 @@
 {
   "name": "team-deps",
-  "description": "Module that gives extended commands to work with npm dependencies in a nodde project",
+  "description": "Module that gives extended commands to work with npm dependencies in a node project",
   "version": "0.0.0",
   "scripts": {
     "fmt": "mongodb-js-fmt",
@@ -33,5 +33,8 @@
   "license": "Apache-2.0",
   "precommit": [
     "check"
-  ]
+  ],
+  "dependency-check": {
+    "entries": ["cli.js"]
+  }
 }

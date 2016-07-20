@@ -1,6 +1,6 @@
 # team-deps [![travis][travis_img]][travis_url] [![npm][npm_img]][npm_url]
 
-> Module that gives extended commands to work with npm dependencies in a nodde project
+> Module that gives extended commands to work with npm dependencies in a node project
 
 When working on a large node project, it may rely on many node modules, some of which may actually be modules from your organization but separated into modules for maintainability and testability. It may be necessary to edit/work with these modules but current tools for working with team dependencies may be difficult to maintain. This tool uses existing npm and git commands but chains and automates them for ease of use.
 
