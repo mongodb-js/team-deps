@@ -1,0 +1,50 @@
+{
+  "name": "mongodb-team-deps",
+  "version": "1.0.0",
+  "description": "Module that gives extended commands to work with npm dependencies in a node project",
+  "main": "cli.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mongodb-js/team-deps"
+  },
+  "author": {
+    "name": "Christopher Shum"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chai": {
+      "name": "chai",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chaijs/chai.git"
+      },
+      "version": "3.5.0"
+    },
+    "mocha": {
+      "name": "mocha",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/mochajs/mocha.git"
+      },
+      "version": "2.5.3"
+    },
+    "yargs": {
+      "name": "yargs",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/yargs/yargs.git"
+      },
+      "version": "4.7.1"
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
